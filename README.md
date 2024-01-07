@@ -1,5 +1,5 @@
 # Exercice-login
-Version 1.0
+Version 0.5 ( project pas finit encore )
 
 Description:
 
