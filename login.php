@@ -37,12 +37,14 @@
 <?php
 session_start ();
 
+
+
 $host = 'localhost'; 
 $username = 'root'; 
 $password = '';
 $dbname = 'users'; 
 
-$conn = mysqli_connect("localhost", "root", "", "users"); // conection a ma base de donnes, et garde la liasion dans le $conection
+$conn = mysqli_connect("localhost", "root", "", "users"); 
 
 if(!$conn) {
     die("Problem de conection: " . mysqli_connect_error());
@@ -74,7 +76,7 @@ if (isset($_POST['valider'])) {
       
         if ($mot_de_passe === $row['user_mdp']) {
             $_SESSION['user_login'] = $identifiant;
-            header('Location: session.html');
+            header('Location: session.php');
             exit;
         } else {
             $message = "Mot de passe incorrect.";
@@ -84,5 +86,7 @@ if (isset($_POST['valider'])) {
     }
 }
 
+
 mysqli_close($conn);
+
 ?>

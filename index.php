@@ -35,7 +35,7 @@
 
 <?php
 
-$conection = mysqli_connect("localhost", "root", "", "users"); // conection a ma base de donnes, et garde la liasion dans le $conection
+$conection = mysqli_connect("localhost", "root", "", "users"); 
 
     if(!$conection) {
         die("Problem de conection: " . mysqli_connect_error());
